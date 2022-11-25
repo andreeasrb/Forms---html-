@@ -26,3 +26,10 @@ app.get('/test', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+
+const price = document.querySelector('#price');
+const output = document.querySelector('.price-output');
+output.textContent = price.value;
+price.addEventListener('input', () => {
+  output.textContent = price.value;
+});

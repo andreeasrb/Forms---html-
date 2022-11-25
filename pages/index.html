@@ -1,18 +1,76 @@
-<link rel="stylesheet" href="./style.css" />
+<html>
+<head>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
 <h1>Hello Express!</h1>
 
 <form method="GET" action="/test">
+  <label >
   <input type="text" name="nume" placeholder="nume" />
   <input type="text" name="email" placeholder="email" />
+  <input type="number" name="age" id="age" placeholder="age" min="1" max="10" step="2"/>
 
+  <div class="drop-down">
+    <h4>Drop-down controls with value attribute and select box</h4>
+    <select id="simple" name="simple">
+      <option value="banana">Big, beautiful yellow banana</option>
+      <option value="cherry">juicy cherry</option>
+      <option value="lemon">powerful lemon</option>
+    </select>
+
+    <h4>Multiple choice select box</h4>
+    <select id="multi" name="multi" multiple size="2">
+      <optgroup label="fruits">
+        <option>Banana</option>
+        <option selected>Cherry</option>
+        <option>Lemon</option>
+      </optgroup>
+      <optgroup label="vegetables">
+        <option>Carrot</option>
+        <option>Eggplant</option>
+        <option>Potato</option>
+      </optgroup>
+    </select>
+
+    <h4>Drop-down controls with autocomplete box</h4>
+    <label for="myFruit">What's your favorite fruit?</label>
+    <input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
+    <datalist id="mySuggestion">
+      <option>Apple</option>
+      <option>Banana</option>
+      <option>Blackberry</option>
+    </datalist>
+  </div>
+  <br />
   <button type="submit">Submit</button>
 </form>
 <hr />
-<div class="drop-down">
-  <h4>Drop-down controls with value attribute and select box</h4>
-  <select id="simple" name="simple">
-    <option value="banana">Big, beautiful yellow banana</option>
-    <option value="cherry">juicy cherry</option>
-    <option value="lemon">powerful lemon</option>
-  </select>
+
+<div class="progress-bar">
+  <p>
+    Progress bar:
+    <progress max="100" value="65">65/100</progress>
+  </p>
 </div>
+
+<div class="meter">
+  <meter min="0" max="100" value="60" low="33" high="66" optimum="90">75</meter>
+</div> <br>
+
+<div class="search-bar">
+  <input type="search" id="search" name="search" />
+</div> <br>
+
+<div class="slider">
+  <label for="price">Choose a maximum price: </label>
+  <input type="range" name="price" id="price" min="500" max="50000" value="25000" step="10"/>
+  <output class="price-output" for="price"></output>
+</div><br>
+
+<script src="/index.js"></script>
+
+</body>
+</html>
+
