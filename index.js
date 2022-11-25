@@ -13,6 +13,10 @@ app.get('/users', (req, res) => {
   res.sendFile(path.resolve('pages/users.html'));
 });
 
+app.get('/drop-downs', (req, res) => {
+  res.sendFile(path.resolve('pages/drop-downs.html'));
+});
+
 app.get('/test', (req, res) => {
   console.log(req.query);
   let queryParams = Object.entries(req.query).reduce(
